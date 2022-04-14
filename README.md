@@ -9,7 +9,7 @@ There are many ways by which you can run this HTTP server.
 
 ## One way
 1. If you have kubernetes locally on you machine, just deploy the deployment using command:
-> kubectl apply -f deployment.yml
+> kubectl create -f deployment.yml
 
 2. Now you can acces the api at http://localhost:80/getData?sortKey=views&limit=10
 
@@ -19,6 +19,8 @@ There are many ways by which you can run this HTTP server.
 ## Second way
 1. If you have docker, you can build the Dockerfile using command:
 > docker build -t <name_you_wish> . 
+or pull remote docker image:
+> docker pull kagarwal24/go-assignment:latest
 
 2. Run the docker container
 > docker run -it -p 80:8000 <name_of_image_in_step_1>
